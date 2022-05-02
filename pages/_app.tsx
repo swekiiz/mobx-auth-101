@@ -7,17 +7,19 @@ import { createEmotionCache } from 'libs/emotion'
 
 import { theme } from 'themes/main'
 
+import { AppWrapper } from 'views/components/appWrapper'
+
+const clientSideEmotionCache = createEmotionCache()
+
 interface CustomAppProps extends AppProps {
   emotionCache?: EmotionCache
 }
-
-const clientSideEmotionCache = createEmotionCache()
 
 const CustomApp = ({ Component, emotionCache = clientSideEmotionCache, pageProps }: CustomAppProps) => {
   return (
     <>
       <Head>
-        <title>Alpha Finance</title>
+        <title>mobx-auth-101</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <StyledEngineProvider injectFirst>
@@ -25,7 +27,9 @@ const CustomApp = ({ Component, emotionCache = clientSideEmotionCache, pageProps
           <MaterialThemeProvider theme={theme}>
             <EmotionThemeProvider theme={theme}>
               <CssBaseline />
-              <Component {...pageProps} />
+              <AppWrapper>
+                <Component {...pageProps} />
+              </AppWrapper>
             </EmotionThemeProvider>
           </MaterialThemeProvider>
         </CacheProvider>

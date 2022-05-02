@@ -20,20 +20,6 @@ class CustomDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Roboto+Mono:wght@400;600&display=swap"
           />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-
-          {
-            // TODO for starter : Add meta data here.
-          }
-          <meta property="og:url" content="" />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content="" />
-          <meta property="og:description" content="" />
-          <meta property="og:image" content="" />
-          <meta name="twitter:card" content="" />
-          <meta name="twitter:site" content="" />
-          <meta name="twitter:title" content="" />
-          <meta name="twitter:description" content="" />
-          <meta name="twitter:image" content="" />
         </Head>
         <body>
           <Main />
@@ -60,7 +46,6 @@ CustomDocument.getInitialProps = async (ctx: DocumentContext) => {
     })
 
   const initialProps = await Document.getInitialProps(ctx)
-
   const emotionStyles = extractCriticalToChunks(initialProps.html)
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
