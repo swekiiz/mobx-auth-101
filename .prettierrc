@@ -1,0 +1,24 @@
+{
+  "semi": false,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "proseWrap": "always",
+  "tabWidth": 2,
+  "printWidth": 120,
+  "importOrder": [
+    "^api/(.*)$",
+    "^constants/(.*)$",
+    "^hooks/(.*)$",
+    "^libs/(.*)$",
+    "^stores/(.*)$",
+    "^themes/(.*)$",
+    "^types/(.*)$",
+    "^utils/(.*)$",
+    "^views/pages/(.*)$",
+    "^views/components/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": false
+}

@@ -1,0 +1,5 @@
+---
+"{src,pages}/**/*.{js,jsx,ts,tsx}":
+  - eslint --quiet
+"{src,pages}/**/*.{json,js,jsx,ts,tsx,html}":
+  - prettier --write
