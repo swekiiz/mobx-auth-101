@@ -1,9 +1,33 @@
 import { createTheme } from '@mui/material/styles'
 
-/**
- * The theme from style guide
- */
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ac7d88',
+      contrastText: '#dae5d0',
+    },
+    secondary: {
+      main: '#a0bcc2',
+      contrastText: '#35373d',
+    },
+    text: {
+      primary: '#85586f',
+      secondary: '#ac7d88',
+    },
+    background: {
+      default: '#f8ecd1',
+      paper: '#deb6ab',
+    },
+    success: {
+      main: '#409a5f', // green
+    },
+    warning: {
+      main: '#fdd05c', // yellow
+    },
+    error: {
+      main: '#fd5c5e', // red
+    },
+  },
   breakpoints: {
     values: {
       xs: 0,
@@ -47,7 +71,10 @@ theme.components = {
     styleOverrides: {
       contained: {
         minWidth: 100,
-        boxShadow: theme.shadows[1],
+        boxShadow: 'unset',
+        '&:hover': {
+          boxShadow: 'unset',
+        },
       },
     },
   },

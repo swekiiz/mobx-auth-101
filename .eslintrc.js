@@ -18,7 +18,7 @@ module.exports = {
     'react/display-name': 'off',
     'react/prop-types': 'off',
     'react-hooks/exhaustive-deps': 'warn',
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-undef': 'off',
     '@typescript-eslint/no-explicit-any': 'error',

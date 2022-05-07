@@ -1,5 +1,10 @@
-import { Typography, styled } from '@mui/material'
+import { Box, styled } from '@mui/material'
 
-export const TestText = styled(Typography)(() => ({
-  color: 'red',
+export const LoginLayout = styled(Box)(({ theme }) => ({
+  width: '100%',
+  height: `calc(100vh - ${theme.spacing(16)})`,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  margin: 0,
 }))
